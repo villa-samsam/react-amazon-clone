@@ -2,7 +2,7 @@ import React from 'react'
 import './Product.css';
 
 
-const Product = ({title, price, rating, image}) => {
+const Product = ({id, title, price, rating, image}) => {
   return (
     <div className='product'>
         <div className='product__info'>
@@ -13,12 +13,17 @@ const Product = ({title, price, rating, image}) => {
         </p>
 
         <div className='product__rating'>
-            <p>{rating}</p>
+          {Array(rating)
+          .fill()
+          .map((_, i) =>(
+          <p>⭐</p>
+          ))}
+            
 
         </div>
         </div>
 
-    <img src='https://m.media-amazon.com/images/I/61rOus07jlL._AC_UF1000,1000_QL80_.jpg'/>
+    <img src={image}/>
     <button>Add to Cart</button>
 
 
