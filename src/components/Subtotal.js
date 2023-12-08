@@ -1,13 +1,11 @@
 import React from 'react';
 import './Subtotal.css';
 import CurrencyFormat from 'react-currency-format';
-import { Checkbox } from '@mui/material';
 import { useStateValue } from './StateProvider';
-import { getCartTotal } from './Reducer';
+import {getCartTotal}  from '../reducer';
+
 
 const Subtotal = () => {
-
-
   const [{cart}, dispatch] = useStateValue();
 
 
@@ -24,9 +22,8 @@ const Subtotal = () => {
                 <input type='Checkbox'/>
                 This order contains a gift
             </small>
-            
-            </>
 
+            </>
         )}              
         decimalScale={2}
         value={getCartTotal(cart)}
