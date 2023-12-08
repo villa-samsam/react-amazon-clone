@@ -12,7 +12,7 @@ export const Checkout = () => {
         alt=''/>
 
         <div>
-            <h2 className='checkOut__title'>Your Shopping Basket</h2>
+            <h2 className='checkOut__title'>Your Shopping Cart</h2>
             {/* Basket Item */}
             {/* Basket Item */}
             {/* Basket Item */}
